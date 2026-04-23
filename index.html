@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <meta name="description" content="Al-Safar — Your trusted partner for Umrah, Hajj, and luxury international tours. Premium travel, curated for discerning pilgrims and travellers." />
+  <title>Al-Safar · Luxury Umrah, Hajj & International Tours</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ========== PRELOADER ========== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__crescent">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldGrad" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#f4d97a"/>
+              <stop offset="55%" stop-color="#d4af37"/>
+              <stop offset="100%" stop-color="#8a6914"/>
+            </linearGradient>
+          </defs>
+          <path d="M100 20 a80 80 0 1 0 55 140 a65 65 0 1 1 0 -120 a80 80 0 0 0 -55 -20 z"
+                fill="url(#goldGrad)"/>
+          <circle cx="150" cy="55" r="7" fill="#f4d97a"/>
+        </svg>
+      </div>
+      <div class="preloader__brand">
+        <span>A</span><span>L</span><span>-</span><span>S</span><span>A</span><span>F</span><span>A</span><span>R</span>
+      </div>
+      <div class="preloader__bar"><span></span></div>
+      <div class="preloader__tagline">Bismillah · begin the journey</div>
+    </div>
+  </div>
+
+  <!-- ========== SCROLL PROGRESS ========== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo" aria-label="Al-Safar Home">
+        <span class="nav-logo__mark">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 L36 36 L20 28 L4 36 Z" fill="currentColor"/></svg>
+        </span>
+        <span class="nav-logo__text">
+          <strong>Al-Safar</strong>
+          <small>Luxury Journeys</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#home" class="nav-link"><span>Home</span></a>
+        <a href="#packages" class="nav-link"><span>Packages</span></a>
+        <a href="#umrah-hajj" class="nav-link"><span>Umrah & Hajj</span></a>
+        <a href="#destinations" class="nav-link"><span>Destinations</span></a>
+        <a href="#experience" class="nav-link"><span>Experience</span></a>
+        <a href="#contact" class="nav-link"><span>Contact</span></a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#book" class="btn btn--ghost"><i class="fa-regular fa-calendar-check"></i> Book Now</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MOBILE DRAWER ========== -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__panel">
+      <button class="drawer__close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+      <div class="drawer__brand">Al-Safar</div>
+      <nav class="drawer__links">
+        <a href="#home">Home</a>
+        <a href="#packages">Packages</a>
+        <a href="#umrah-hajj">Umrah & Hajj</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="drawer__foot">
+        <a href="tel:+919999999999" class="btn btn--gold"><i class="fa-solid fa-phone"></i> +91 99999 99999</a>
+        <a href="https://wa.me/919999999999" class="btn btn--ghost"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero__media">
+      <div class="hero__image" style="background-image:url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?q=80&w=2400&auto=format&fit=crop')"></div>
+      <div class="hero__veil"></div>
+      <div class="hero__grain"></div>
+    </div>
+
+    <div class="hero__content container">
+      <div class="hero__eyebrow">
+        <span class="dot"></span> Est. 1998 · Serving pilgrims across 27 countries
+      </div>
+
+      <h1 class="hero__title">
+        <span data-split class="line">Your Trusted Partner for</span>
+        <span class="line line--rotator">
+          <span class="rotator" id="rotator">
+            <span class="rotator__word">Umrah</span>
+            <span class="rotator__word">Hajj</span>
+            <span class="rotator__word">Dubai</span>
+            <span class="rotator__word">Turkey</span>
+            <span class="rotator__word">Malaysia</span>
+          </span>
+        </span>
+        <span data-split class="line">&amp; International Tours</span>
+      </h1>
+
+      <p class="hero__sub" data-split>
+        Hand-crafted pilgrimages and private escapes for guests who value silence, service and sincerity. Fully licensed · IATA accredited · Visa-in-hand guarantee.
+      </p>
+
+      <div class="hero__cta">
+        <a href="#packages" class="btn btn--gold btn--lg magnetic">
+          <span>Explore Packages</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#book" class="btn btn--glass btn--lg magnetic">
+          <span>Book Now</span>
+          <i class="fa-regular fa-calendar"></i>
+        </a>
+      </div>
+
+      <!-- Floating quick stats -->
+      <div class="hero__stats">
+        <div class="hero-stat"><b data-count="27">0</b><span>Years of service</span></div>
+        <div class="hero-stat"><b data-count="52000">0</b><span>Pilgrims served</span></div>
+        <div class="hero-stat"><b data-count="4.9" data-decimals="1">0</b><span>Avg. rating</span></div>
+      </div>
+
+      <!-- Smart search -->
+      <form class="hero-search glass" onsubmit="event.preventDefault(); openBookingToast();">
+        <div class="hero-search__field">
+          <label><i class="fa-solid fa-location-dot"></i> Destination</label>
+          <select>
+            <option>Makkah & Madinah · Umrah</option>
+            <option>Makkah & Madinah · Hajj</option>
+            <option>Dubai, UAE</option>
+            <option>Istanbul & Cappadocia</option>
+            <option>Kuala Lumpur & Langkawi</option>
+            <option>Baku, Azerbaijan</option>
+            <option>Samarkand, Uzbekistan</option>
+          </select>
+        </div>
+        <div class="hero-search__field">
+          <label><i class="fa-regular fa-calendar"></i> Date</label>
+          <input type="date" />
+        </div>
+        <div class="hero-search__field">
+          <label><i class="fa-solid fa-user-group"></i> Travellers</label>
+          <select>
+            <option>1 adult</option>
+            <option>2 adults</option>
+            <option>3 adults</option>
+            <option>4 adults</option>
+            <option>Family (5+)</option>
+          </select>
+        </div>
+        <button class="btn btn--gold hero-search__btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+      </form>
+    </div>
+
+    <a href="#marquee" class="hero__scroll" aria-label="Scroll down">
+      <span class="hero__scroll-line"></span>
+      <span>Scroll</span>
+    </a>
+  </section>
+
+  <!-- ========== BRAND MARQUEE ========== -->
+  <section class="marquee" id="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <div class="marquee__group">
+        <span>IATA Accredited</span><i>✦</i>
+        <span>Saudi Ministry Approved</span><i>✦</i>
+        <span>5-Star Hotel Partners</span><i>✦</i>
+        <span>24/7 Concierge</span><i>✦</i>
+        <span>Private Ziyarat</span><i>✦</i>
+        <span>Visa in Hand</span><i>✦</i>
+      </div>
+      <div class="marquee__group" aria-hidden="true">
+        <span>IATA Accredited</span><i>✦</i>
+        <span>Saudi Ministry Approved</span><i>✦</i>
+        <span>5-Star Hotel Partners</span><i>✦</i>
+        <span>24/7 Concierge</span><i>✦</i>
+        <span>Private Ziyarat</span><i>✦</i>
+        <span>Visa in Hand</span><i>✦</i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PACKAGES ========== -->
+  <section class="section packages" id="packages">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__eyebrow"><span class="dot"></span> Signature Collections</div>
+        <h2 class="section-head__title">Curated journeys,<br/><em>thoughtfully composed.</em></h2>
+        <p class="section-head__sub">From private Umrah with a personal mutawwif to luxury international escapes — every itinerary is hand-built around silence, comfort and meaning.</p>
+      </div>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="umrah">Umrah</button>
+        <button class="chip" data-filter="hajj">Hajj</button>
+        <button class="chip" data-filter="dubai">Dubai</button>
+        <button class="chip" data-filter="intl">International</button>
+      </div>
+
+      <div class="cards" id="packageGrid">
+        <!-- Cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== UMRAH & HAJJ ========== -->
+  <section class="section sacred" id="umrah-hajj">
+    <div class="sacred__bg" style="background-image:url('https://images.unsplash.com/photo-1565019011521-b0575cbb57c8?q=80&w=2400&auto=format&fit=crop')"></div>
+    <div class="sacred__veil"></div>
+
+    <div class="container">
+      <div class="section-head section-head--light">
+        <div class="section-head__eyebrow"><span class="dot"></span> The Sacred Journey</div>
+        <h2 class="section-head__title">Umrah &amp; Hajj,<br/><em>done the right way.</em></h2>
+        <p class="section-head__sub">A dedicated team walks with you from the first document to the final tawaf. Every step is quiet, organised, and deeply respectful of the rites.</p>
+      </div>
+
+      <!-- Timeline -->
+      <ol class="timeline">
+        <li class="timeline__item">
+          <div class="timeline__num">01</div>
+          <div class="timeline__card glass">
+            <i class="fa-solid fa-passport"></i>
+            <h3>Visa &amp; Documents</h3>
+            <p>We handle the full visa file — meningitis certificate, vaccinations, Nusuk registration and insurance — with a dedicated case manager.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__num">02</div>
+          <div class="timeline__card glass">
+            <i class="fa-solid fa-plane"></i>
+            <h3>Travel &amp; Transfers</h3>
+            <p>Premium airlines, priority check-in, and private Haramain transfers. No crowds, no confusion — just calm.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__num">03</div>
+          <div class="timeline__card glass">
+            <i class="fa-solid fa-bed"></i>
+            <h3>Five-Star Stay</h3>
+            <p>Rooms overlooking the Haram at Fairmont, Conrad and Swissotel. Suhoor, iftar, and 24-hour chai on call.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__num">04</div>
+          <div class="timeline__card glass">
+            <i class="fa-solid fa-route"></i>
+            <h3>Ziyarat &amp; Return</h3>
+            <p>Guided ziyarat with a scholar in Urdu / English / Arabic, followed by a rested, unhurried return home.</p>
+          </div>
+        </li>
+      </ol>
+
+      <!-- Inclusions -->
+      <div class="inclusions">
+        <h3 class="inclusions__title">Every journey includes</h3>
+        <div class="inclusions__grid">
+          <div class="inclusion"><i class="fa-solid fa-plane-up"></i><span>Return flights</span></div>
+          <div class="inclusion"><i class="fa-solid fa-hotel"></i><span>5★ Haram-view hotels</span></div>
+          <div class="inclusion"><i class="fa-solid fa-utensils"></i><span>All meals, halal-certified</span></div>
+          <div class="inclusion"><i class="fa-solid fa-van-shuttle"></i><span>Private transfers</span></div>
+          <div class="inclusion"><i class="fa-solid fa-user-tie"></i><span>Scholar-guided ziyarat</span></div>
+          <div class="inclusion"><i class="fa-solid fa-shield-heart"></i><span>Travel insurance</span></div>
+          <div class="inclusion"><i class="fa-solid fa-suitcase-rolling"></i><span>Ihram & zam-zam</span></div>
+          <div class="inclusion"><i class="fa-solid fa-headset"></i><span>24/7 on-ground support</span></div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq">
+        <h3 class="faq__title">Questions our guests ask</h3>
+        <div class="faq__list" id="faqList">
+          <details class="faq__item">
+            <summary>What documents are required for Umrah?</summary>
+            <p>A passport valid for at least 6 months, two recent photographs, a meningitis (ACWY) vaccination certificate, and a completed visa application. We prepare and submit everything on your behalf.</p>
+          </details>
+          <details class="faq__item">
+            <summary>When is the best time to travel for Umrah?</summary>
+            <p>Ramadan, the last ten nights, and the days after Hajj are the most spiritually intense. For comfort, the shoulder months (October–November, February–March) offer cooler weather and smaller crowds.</p>
+          </details>
+          <details class="faq__item">
+            <summary>How is the cost structured?</summary>
+            <p>Your package price covers flights, 5★ accommodation, all transfers, meals, guide fees, visa, insurance and zam-zam. Only personal shopping and optional experiences sit outside.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Can you arrange a private, family-only group?</summary>
+            <p>Yes — private groups from 4 to 40 guests are our specialty. You choose hotels, airline, dates and guide language; we design the rest.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Is there support if I fall ill in Makkah or Madinah?</summary>
+            <p>A resident Al-Safar team member is reachable 24/7 and accompanies guests to approved hospitals. All medical costs within package coverage are handled on your behalf.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY US ========== -->
+  <section class="section why">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__eyebrow"><span class="dot"></span> Why Al-Safar</div>
+        <h2 class="section-head__title">The quiet difference,<br/><em>felt on every journey.</em></h2>
+      </div>
+
+      <div class="why__grid">
+        <div class="why__card glass">
+          <div class="why__icon"><i class="fa-solid fa-crown"></i></div>
+          <h3>27 years of service</h3>
+          <p>Three generations of the same family guiding pilgrims since 1998.</p>
+        </div>
+        <div class="why__card glass">
+          <div class="why__icon"><i class="fa-solid fa-people-group"></i></div>
+          <h3>52,000+ pilgrims</h3>
+          <p>Over half a lakh guests welcomed home with stories they still tell.</p>
+        </div>
+        <div class="why__card glass">
+          <div class="why__icon"><i class="fa-solid fa-headset"></i></div>
+          <h3>24 / 7 concierge</h3>
+          <p>A real human answers your call — in Urdu, English, Hindi or Arabic.</p>
+        </div>
+        <div class="why__card glass">
+          <div class="why__icon"><i class="fa-solid fa-hotel"></i></div>
+          <h3>Verified hotels only</h3>
+          <p>We personally inspect every property every season. No surprises.</p>
+        </div>
+        <div class="why__card glass">
+          <div class="why__icon"><i class="fa-solid fa-file-shield"></i></div>
+          <h3>Visa-in-hand guarantee</h3>
+          <p>If your visa is denied, we refund every rupee within 72 hours.</p>
+        </div>
+        <div class="why__card glass">
+          <div class="why__icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Hand-built itineraries</h3>
+          <p>No mass groups. Every journey is designed around your family.</p>
+        </div>
+      </div>
+
+      <!-- Big counters -->
+      <div class="counters">
+        <div class="counter"><b data-count="27">0</b><span>Years</span></div>
+        <div class="counter"><b data-count="52000">0</b><span>Happy pilgrims</span></div>
+        <div class="counter"><b data-count="180">0</b><span>Partner hotels</span></div>
+        <div class="counter"><b data-count="34">0</b><span>Destinations</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMPARISON ========== -->
+  <section class="section compare">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__eyebrow"><span class="dot"></span> Choose your tier</div>
+        <h2 class="section-head__title">Three ways to travel,<br/><em>one promise of care.</em></h2>
+      </div>
+
+      <div class="compare__table glass">
+        <div class="compare__row compare__row--head">
+          <div class="compare__cell">Feature</div>
+          <div class="compare__cell">Essential</div>
+          <div class="compare__cell compare__cell--featured">Premium <span class="badge">Most chosen</span></div>
+          <div class="compare__cell">VIP</div>
+        </div>
+        <div class="compare__row">
+          <div class="compare__cell">Hotel distance from Haram</div>
+          <div class="compare__cell">500 m</div>
+          <div class="compare__cell compare__cell--featured">200 m</div>
+          <div class="compare__cell">50 m · Haram view</div>
+        </div>
+        <div class="compare__row">
+          <div class="compare__cell">Room type</div>
+          <div class="compare__cell">Quad sharing</div>
+          <div class="compare__cell compare__cell--featured">Double</div>
+          <div class="compare__cell">Executive suite</div>
+        </div>
+        <div class="compare__row">
+          <div class="compare__cell">Meals</div>
+          <div class="compare__cell">Breakfast</div>
+          <div class="compare__cell compare__cell--featured">Full board</div>
+          <div class="compare__cell">À la carte · all day</div>
+        </div>
+        <div class="compare__row">
+          <div class="compare__cell">Transport</div>
+          <div class="compare__cell">Shared coach</div>
+          <div class="compare__cell compare__cell--featured">Private SUV</div>
+          <div class="compare__cell">Luxury chauffeur</div>
+        </div>
+        <div class="compare__row">
+          <div class="compare__cell">Scholar / guide</div>
+          <div class="compare__cell">Group</div>
+          <div class="compare__cell compare__cell--featured">Semi-private</div>
+          <div class="compare__cell">Personal mutawwif</div>
+        </div>
+        <div class="compare__row">
+          <div class="compare__cell">Flight class</div>
+          <div class="compare__cell">Economy</div>
+          <div class="compare__cell compare__cell--featured">Premium economy</div>
+          <div class="compare__cell">Business</div>
+        </div>
+        <div class="compare__row compare__row--price">
+          <div class="compare__cell">Starting from</div>
+          <div class="compare__cell"><strong>₹ 99,000</strong></div>
+          <div class="compare__cell compare__cell--featured"><strong>₹ 1,85,000</strong></div>
+          <div class="compare__cell"><strong>₹ 3,75,000</strong></div>
+        </div>
+        <div class="compare__row compare__row--cta">
+          <div class="compare__cell"></div>
+          <div class="compare__cell"><a href="#contact" class="btn btn--ghost btn--sm">Enquire</a></div>
+          <div class="compare__cell compare__cell--featured"><a href="#contact" class="btn btn--gold btn--sm">Enquire</a></div>
+          <div class="compare__cell"><a href="#contact" class="btn btn--ghost btn--sm">Enquire</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DESTINATIONS MAP ========== -->
+  <section class="section destinations" id="destinations">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__eyebrow"><span class="dot"></span> Where we travel</div>
+        <h2 class="section-head__title">Quietly remarkable<br/><em>corners of the world.</em></h2>
+      </div>
+
+      <div class="destinations__wrap">
+        <div class="destinations__list" id="destList">
+          <button class="dest-btn is-active" data-dest="makkah">
+            <span class="dest-btn__num">01</span>
+            <span class="dest-btn__name">Makkah &amp; Madinah</span>
+            <span class="dest-btn__meta">Umrah · Hajj</span>
+          </button>
+          <button class="dest-btn" data-dest="dubai">
+            <span class="dest-btn__num">02</span>
+            <span class="dest-btn__name">Dubai, UAE</span>
+            <span class="dest-btn__meta">Luxury city escape</span>
+          </button>
+          <button class="dest-btn" data-dest="istanbul">
+            <span class="dest-btn__num">03</span>
+            <span class="dest-btn__name">Istanbul, Türkiye</span>
+            <span class="dest-btn__meta">Heritage & Bosphorus</span>
+          </button>
+          <button class="dest-btn" data-dest="malaysia">
+            <span class="dest-btn__num">04</span>
+            <span class="dest-btn__name">Malaysia</span>
+            <span class="dest-btn__meta">KL · Langkawi</span>
+          </button>
+          <button class="dest-btn" data-dest="baku">
+            <span class="dest-btn__num">05</span>
+            <span class="dest-btn__name">Baku, Azerbaijan</span>
+            <span class="dest-btn__meta">Old city & Caspian</span>
+          </button>
+          <button class="dest-btn" data-dest="samarkand">
+            <span class="dest-btn__num">06</span>
+            <span class="dest-btn__name">Samarkand</span>
+            <span class="dest-btn__meta">Silk Road trails</span>
+          </button>
+        </div>
+
+        <div class="destinations__canvas">
+          <div class="dest-card glass" id="destCard">
+            <div class="dest-card__img" id="destImg" style="background-image:url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?q=80&w=2000&auto=format&fit=crop')"></div>
+            <div class="dest-card__body">
+              <h3 id="destTitle">Makkah &amp; Madinah</h3>
+              <p id="destDesc">The heart of every journey. Private Haram-view suites, scholar-guided ziyarat, and a team on the ground that never leaves your side.</p>
+              <div class="dest-card__meta">
+                <span><i class="fa-regular fa-clock"></i> <em id="destDur">7–14 nights</em></span>
+                <span><i class="fa-solid fa-indian-rupee-sign"></i> from <em id="destPrice">99,000</em></span>
+              </div>
+              <a href="#contact" class="btn btn--gold btn--sm">Design my journey</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COUNTDOWN + GALLERY ========== -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="countdown glass">
+        <div class="countdown__left">
+          <div class="section-head__eyebrow"><span class="dot"></span> Next Hajj Season</div>
+          <h2 class="countdown__title">Hajj 1447 AH<br/><em>begins in</em></h2>
+          <p class="countdown__sub">Limited premium allocations. Early reservations open with a fully refundable intent-to-travel.</p>
+          <a href="#book" class="btn btn--gold">Reserve your place</a>
+        </div>
+        <div class="countdown__right">
+          <div class="count-cell"><b id="cd-days">00</b><span>Days</span></div>
+          <div class="count-cell"><b id="cd-hours">00</b><span>Hours</span></div>
+          <div class="count-cell"><b id="cd-mins">00</b><span>Minutes</span></div>
+          <div class="count-cell"><b id="cd-secs">00</b><span>Seconds</span></div>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top:120px">
+        <div class="section-head__eyebrow"><span class="dot"></span> Moments from the road</div>
+        <h2 class="section-head__title">A glimpse of the<br/><em>Al-Safar experience.</em></h2>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <div class="gallery__item gallery__item--tall" style="background-image:url('https://images.unsplash.com/photo-1564769625392-651b2c888f2b?q=80&w=1600&auto=format&fit=crop')"></div>
+        <div class="gallery__item" style="background-image:url('https://images.unsplash.com/photo-1580407836477-c79126d2b1ff?q=80&w=1600&auto=format&fit=crop')"></div>
+        <div class="gallery__item" style="background-image:url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1600&auto=format&fit=crop')"></div>
+        <div class="gallery__item gallery__item--wide" style="background-image:url('https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?q=80&w=2000&auto=format&fit=crop')"></div>
+        <div class="gallery__item" style="background-image:url('https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1600&auto=format&fit=crop')"></div>
+        <div class="gallery__item gallery__item--tall" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop')"></div>
+        <div class="gallery__item" style="background-image:url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1600&auto=format&fit=crop')"></div>
+        <div class="gallery__item" style="background-image:url('https://images.unsplash.com/photo-1549221987-25a490f65d34?q=80&w=1600&auto=format&fit=crop')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__eyebrow"><span class="dot"></span> Guest stories</div>
+        <h2 class="section-head__title">Trusted by families<br/><em>across three generations.</em></h2>
+      </div>
+
+      <div class="reviews" id="reviews">
+        <article class="review glass">
+          <div class="review__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>“The most organised Umrah we have ever done. Our parents didn't have to lift a bag. The team felt like family by the end.”</p>
+          <footer>
+            <b>Farhan &amp; Nasreen Qureshi</b>
+            <span>Hyderabad · VIP Umrah · 2025</span>
+          </footer>
+        </article>
+        <article class="review glass">
+          <div class="review__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>“We booked a private Hajj for fourteen relatives. Every small wish — from a specific tea to prayer rooms — was anticipated.”</p>
+          <footer>
+            <b>Dr. Ayesha Siddiqui</b>
+            <span>Mumbai · Private Hajj · 2024</span>
+          </footer>
+        </article>
+        <article class="review glass">
+          <div class="review__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>“I travel for work constantly. Al-Safar's attention to detail surpasses every luxury brand I have used. Quiet, precise, generous.”</p>
+          <footer>
+            <b>Imran Kothari</b>
+            <span>Dubai · Istanbul luxury · 2025</span>
+          </footer>
+        </article>
+        <article class="review glass">
+          <div class="review__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>“Our mother is 78. The team carried her dua list, managed her wheelchair, and found her a quiet spot for every salah. Priceless.”</p>
+          <footer>
+            <b>The Ansari family</b>
+            <span>Bangalore · Premium Umrah · 2024</span>
+          </footer>
+        </article>
+        <article class="review glass">
+          <div class="review__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>“No other agency answers their phone at 3am in Makkah when you need help. Al-Safar does. That alone is worth every rupee.”</p>
+          <footer>
+            <b>Sajid Ali</b>
+            <span>Kolkata · Ramadan Umrah · 2025</span>
+          </footer>
+        </article>
+      </div>
+
+      <div class="reviews-nav">
+        <button class="rn-btn" id="revPrev" aria-label="Previous review"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="reviews-dots" id="revDots"></div>
+        <button class="rn-btn" id="revNext" aria-label="Next review"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BOOKING ========== -->
+  <section class="section booking" id="book">
+    <div class="container booking__wrap">
+      <div class="booking__left">
+        <div class="section-head section-head--left">
+          <div class="section-head__eyebrow"><span class="dot"></span> Begin planning</div>
+          <h2 class="section-head__title">Design your<br/><em>private journey.</em></h2>
+          <p class="section-head__sub">Share a few details — a human advisor will call you within the hour with a quiet, curated proposal.</p>
+        </div>
+
+        <ul class="booking__points">
+          <li><i class="fa-solid fa-check"></i> No auto-emails. A real advisor, same day.</li>
+          <li><i class="fa-solid fa-check"></i> Fully refundable intent-to-travel.</li>
+          <li><i class="fa-solid fa-check"></i> Flexible dates and private-group pricing.</li>
+          <li><i class="fa-solid fa-check"></i> EMI on all premium packages.</li>
+        </ul>
+      </div>
+
+      <form class="booking__form glass" id="bookingForm" onsubmit="return handleBookingSubmit(event)">
+        <h3>Enquiry form</h3>
+        <div class="field">
+          <label>Full name</label>
+          <input type="text" required placeholder="Your name" />
+        </div>
+        <div class="field">
+          <label>Package</label>
+          <select required>
+            <option value="">Choose one…</option>
+            <option>Umrah · Essential</option>
+            <option>Umrah · Premium</option>
+            <option>Umrah · VIP</option>
+            <option>Hajj · Premium</option>
+            <option>Hajj · VIP</option>
+            <option>Dubai Luxury</option>
+            <option>Istanbul Heritage</option>
+            <option>Malaysia Family</option>
+            <option>Custom itinerary</option>
+          </select>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Travel date</label>
+            <input type="date" required />
+          </div>
+          <div class="field">
+            <label>Travellers</label>
+            <select required>
+              <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Phone</label>
+            <input type="tel" required placeholder="+91 99999 99999" />
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" required placeholder="you@email.com" />
+          </div>
+        </div>
+        <div class="field">
+          <label>Notes (optional)</label>
+          <textarea rows="3" placeholder="Family size, elderly guests, dietary notes…"></textarea>
+        </div>
+        <button class="btn btn--gold btn--lg btn--block" type="submit">Request proposal <i class="fa-solid fa-arrow-right"></i></button>
+        <p class="booking__legal">By submitting, you agree to be contacted by Al-Safar. We never share your details.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__eyebrow"><span class="dot"></span> Talk to a human</div>
+        <h2 class="section-head__title">We answer, every time.</h2>
+        <p class="section-head__sub">No chatbots for serious questions. Pick the line that suits you — a senior advisor will pick up personally.</p>
+      </div>
+
+      <div class="contact__grid">
+        <a class="contact__card glass" href="https://wa.me/919999999999?text=Assalamu%20Alaikum%2C%20I%20would%20like%20a%20proposal%20from%20Al-Safar.">
+          <div class="contact__icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <h3>WhatsApp</h3>
+          <p>Fastest response · usually under 4 minutes.</p>
+          <span class="contact__value">+91 99999 99999</span>
+          <span class="contact__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="contact__card glass" href="tel:+919999999999">
+          <div class="contact__icon"><i class="fa-solid fa-phone"></i></div>
+          <h3>Call</h3>
+          <p>Senior advisor · 9:00 am to 11:00 pm IST.</p>
+          <span class="contact__value">+91 99999 99999</span>
+          <span class="contact__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="contact__card glass" href="mailto:hello@alsafar.travel?subject=Journey%20enquiry">
+          <div class="contact__icon"><i class="fa-regular fa-envelope"></i></div>
+          <h3>Email</h3>
+          <p>Detailed proposals and documents.</p>
+          <span class="contact__value">hello@alsafar.travel</span>
+          <span class="contact__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+      </div>
+
+      <div class="office glass">
+        <div>
+          <h4>Our studio</h4>
+          <p>Level 14, Trade Centre · BKC · Mumbai 400051<br/>
+          By private appointment · Monday to Saturday.</p>
+        </div>
+        <div>
+          <h4>Licenses</h4>
+          <p>IATA 11-4 · MoT India 2019-UMR-0341<br/>
+          Saudi Ministry of Hajj &amp; Umrah approved operator.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#home" class="nav-logo">
+            <span class="nav-logo__mark"><svg viewBox="0 0 40 40"><path d="M20 4 L36 36 L20 28 L4 36 Z" fill="currentColor"/></svg></span>
+            <span class="nav-logo__text"><strong>Al-Safar</strong><small>Luxury Journeys</small></span>
+          </a>
+          <p>Quiet, hand-crafted pilgrimages and international escapes — designed around your family, not a brochure.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h5>Journeys</h5>
+          <a href="#packages">Umrah packages</a>
+          <a href="#packages">Hajj packages</a>
+          <a href="#destinations">Dubai escapes</a>
+          <a href="#destinations">International tours</a>
+          <a href="#destinations">Private groups</a>
+        </div>
+        <div class="footer__col">
+          <h5>Al-Safar</h5>
+          <a href="#umrah-hajj">The sacred process</a>
+          <a href="#experience">Gallery</a>
+          <a href="#contact">Contact</a>
+          <a href="#book">Book</a>
+          <a href="#">Careers</a>
+        </div>
+        <div class="footer__col">
+          <h5>Concierge</h5>
+          <p><i class="fa-solid fa-phone"></i> +91 99999 99999</p>
+          <p><i class="fa-regular fa-envelope"></i> hello@alsafar.travel</p>
+          <p><i class="fa-solid fa-location-dot"></i> Mumbai · Dubai · Jeddah</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> Al-Safar Luxury Journeys Pvt. Ltd. Made with quiet care.</span>
+        <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Cancellation</a></span>
+      </div>
+
+      <div class="footer__credit">
+        <a href="https://www.linkedin.com/in/akeeffarooqi7/" target="_blank" rel="noopener noreferrer" class="credit-link" aria-label="Visit Akeef Farooqi on LinkedIn">
+          <span class="credit-label">Built by</span>
+          <span class="credit-name">Akeef Farooqi</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING WHATSAPP ========== -->
+  <a href="https://wa.me/919999999999?text=Assalamu%20Alaikum%2C%20I%20would%20like%20a%20proposal." class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-float__pulse"></span>
+  </a>
+
+  <!-- ========== CHATBOT ========== -->
+  <div class="chatbot" id="chatbot">
+    <button class="chatbot__toggle" id="chatbotToggle" aria-label="Open chat">
+      <i class="fa-solid fa-comments"></i>
+    </button>
+    <div class="chatbot__panel glass" id="chatbotPanel" aria-hidden="true">
+      <div class="chatbot__head">
+        <div>
+          <b>Al-Safar concierge</b>
+          <span><span class="online-dot"></span> Online · replies instantly</span>
+        </div>
+        <button class="chatbot__close" id="chatbotClose" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="chatbot__body" id="chatbotBody">
+        <div class="bubble bubble--bot">Assalamu Alaikum 🌙 I'm Noor, your Al-Safar concierge. How may I help you today?</div>
+        <div class="bubble bubble--bot">Quick suggestions:</div>
+      </div>
+      <div class="chatbot__chips" id="chatbotChips">
+        <button>Umrah quote</button>
+        <button>Hajj 2026</button>
+        <button>Dubai family trip</button>
+        <button>Talk to human</button>
+      </div>
+      <div class="chatbot__input">
+        <input type="text" id="chatbotInput" placeholder="Type a message…" />
+        <button id="chatbotSend" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== TOAST ========== -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <div class="toast__inner glass">
+      <i class="fa-solid fa-circle-check"></i>
+      <div>
+        <b>Request received</b>
+        <span>Our team will contact you shortly, Insha'Allah.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== PACKAGE MODAL ========== -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel glass" role="dialog" aria-modal="true">
+      <button class="modal__close" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal__media" id="modalMedia"></div>
+      <div class="modal__body">
+        <div class="modal__head">
+          <h3 id="modalTitle"></h3>
+          <div class="modal__meta" id="modalMeta"></div>
+        </div>
+        <div class="modal__tabs">
+          <button class="tab is-active" data-tab="itinerary">Itinerary</button>
+          <button class="tab" data-tab="hotels">Hotels</button>
+          <button class="tab" data-tab="inclusions">Inclusions</button>
+          <button class="tab" data-tab="gallery">Gallery</button>
+        </div>
+        <div class="modal__tabpane is-active" data-pane="itinerary" id="paneItin"></div>
+        <div class="modal__tabpane" data-pane="hotels" id="paneHotels"></div>
+        <div class="modal__tabpane" data-pane="inclusions" id="paneInc"></div>
+        <div class="modal__tabpane" data-pane="gallery" id="paneGallery"></div>
+        <div class="modal__cta">
+          <a href="#book" class="btn btn--gold" data-close>Request this journey</a>
+          <a href="https://wa.me/919999999999" class="btn btn--ghost"><i class="fa-brands fa-whatsapp"></i> WhatsApp us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
